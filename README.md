@@ -1,4 +1,4 @@
-# To Do List App - with database
+# To Do List - with database
 
 ##### A customizable personal task list. Create a to-do list and save it on a local database. August 30, 2015.
 
@@ -18,11 +18,12 @@ A user can add tasks to a database and specify parameters such as task type
 
 **In PSQL:**
 
-* CREATE DATABASE to_do_list;
-* \c to_do_list;
-* CREATE TABLE tasks (id SERIAL PRIMARY KEY, description VARCHAR(50));
-* CREATE TABLE categories (id SERIAL PRIMARY KEY, name VARCHAR(50));
-* CREATE TABLE tasks_categories (id SERIAL PRIMARY KEY, task_id INT, category_id INT;
+CREATE DATABASE to_do;
+\c to_do;
+CREATE TABLE tasks (id SERIAL PRIMARY KEY, description VARCHAR(50));
+CREATE TABLE categories (id SERIAL PRIMARY KEY, name VARCHAR(50));
+CREATE TABLE categories_tasks (id SERIAL PRIMARY KEY, category_id INT, task_id INT);
+CREATE DATABASE to_do_test WITH TEMPLATE to_do;
 
 ## Technologies Used
 
